@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFF00" >
+
+    <com.google.ads.AdView android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6495350994846873/4059662744"
+        ads:loadAdOnCreate="true" />
+
+    <Button android:id="@+id/btn_show_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adView"
+        android:background="#CCCCCC"
+        android:text="  Show Map  "
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="5dip" />
+
+    <Button android:id="@+id/btn_get_rand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adView"
+        android:layout_toRightOf="@id/btn_show_map"
+        android:background="#CCCCCC"
+        android:text="  Decide for me  "
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_show_map" />
+</RelativeLayout>

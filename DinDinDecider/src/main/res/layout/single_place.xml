@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:background="#FFFF00"
+    tools:context=".SinglePlaceActivity" >
+    <com.google.ads.AdView android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6495350994846873/4059662744"
+        ads:loadAdOnCreate="true" />
+    <TextView android:id="@+id/namelbl"
+        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adView"
+        android:layout_marginTop="10dip"
+        android:textSize="24dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dip"
+        android:layout_margin="10dip"
+        android:layout_toRightOf="@id/namelbl" />
+
+    <TextView android:id="@+id/addlbl"
+        android:text="Address:"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="5dip"
+        android:textStyle="bold"
+        android:layout_below="@id/namelbl" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addlbl" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_below="@id/address" />
+
+    <ImageButton
+        android:id="@+id/btn_make_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone"
+        android:background="@null"
+        android:layout_marginTop="10dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <ImageButton
+        android:id="@+id/btn_get_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navigation"
+        android:background="@null"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/btn_make_call"
+        android:layout_alignParentRight="true"/>
+
+    <fragment
+        android:id="@+id/mapSingleView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/phone"
+        android:paddingTop="10dip"
+        android:enabled="true"
+        android:clickable="true"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+</RelativeLayout>

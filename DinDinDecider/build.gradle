@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    testBuildType = "debug"
+
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs')
+    compile 'com.google.android.gms:play-services:3.2.25'
+    compile 'com.android.support:support-v4:19.0.0'
+    compile 'com.android.support:appcompat-v7:+'
+
+}
+/*dependencies {
+compile 'com.google.android.gms:play-services:3.1.36'
+compile 'com.android.support:support-v4:18.0.0'
+compile 'com.android.support:appcompat-v7:+'
+compile project(':DinDinDecider:libs:android-support-v4')
+compile project(':DinDinDecider:libs:google-api-client-1.10.3-beta')
+compile project(':DinDinDecider:libs:google-api-client-android2-1.10.3-beta')
+compile project(':DinDinDecider:libs:google-http-client-1.10.3-beta')
+compile project(':DinDinDecider:libs:google-http-client-android2-1.10.3-beta')
+compile project(':DinDinDecider:libs:google-oauth-client-1.10.1-beta')
+compile project(':DinDinDecider:libs:GoogleAdMobAdsSdk-6.4.1')
+compile project(':DinDinDecider:libs:gson-2.1')
+compile project(':DinDinDecider:libs:guava-11.0.1')
+compile project(':DinDinDecider:libs:jackson-core-asl-1.9.4')
+compile project(':DinDinDecider:libs:jsr305-1.3.9')
+compile project(':DinDinDecider:libs:protobuf-java-2.2.0')
+}*/
