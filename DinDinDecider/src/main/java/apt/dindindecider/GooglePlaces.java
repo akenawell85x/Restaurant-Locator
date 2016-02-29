@@ -17,7 +17,7 @@ public class GooglePlaces {
 
     private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
 
-    private static final String API_KEY = "AIzaSyDBItvkNZp1FPz3oyj0wLgzj9v54HOPwUA";
+    private static final String API_KEY = "Put Google API Key Here";
 
     private static final String PLACES_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/search/json?";
     private static final String PLACES_TEXT_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/search/json?";
